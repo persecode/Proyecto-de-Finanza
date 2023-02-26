@@ -1,7 +1,9 @@
 <?php
-include 'conexion_bd.php';
+require_once 'conexion_bd.php';
 $user_bd = $_POST['nombre'];
 $password_bd = $_POST['contraseña'];
+
+
 $insertar_login = "INSERT INTO acceso (usuario,clave) VALUES ('$user_bd','$password_bd')"; 
 $verificar_usuario = mysqli_query($conexion,"SELECT * FROM acceso WHERE usuario ='$user_bd'");
 

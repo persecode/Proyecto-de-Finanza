@@ -1,5 +1,5 @@
 <?php
-include_once 'conexion_bd.php';
+require_once 'conexion_bd.php';
 $user=$_POST['user'];
 $password=$_POST['password'];
 
