@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carga de Gasto del Producto</title>
+    <script src="test.js"></script>
     <link rel="stylesheet" href="u.css" />
   </head>
   <body>
     <h2> <a href="menu.html">Menu principal</a> </h2>
     <h1>Formulario - Carga de Gasto del Producto</h1>
-
     <div class="co">
       <form action="" method="post">
         <h2>Producto vendido a</h2>
@@ -29,11 +29,9 @@
         <label for="">Costo Transporte</label>
         <input type="text" id="" name="" placeholder="Costo Transporte" class="input-48" require/>
         <input type="submit" id="" value="Registrar" class="input-48" require />
-      </form>
-    </div>
-
-    <div class="contenedor_formulario">
-      <table>
+        </div>
+          <div class="contenedor_formulario">
+        <table>
         <div class="caption">
         <caption>Detalle del Producto</caption>
         </div>
@@ -49,27 +47,37 @@
               <th>Total</th>
             </tr>
           <tr>
-            <td><input class="input" type="number"></td>
-            <td><input class="input" type="number"></td>
-            <td><input class="input" type="number"></td>
-            <td><input class="input" type="number"></td>
-            <td><input class="input" type="number"></td>
-            <td><input class="input" type="number"></td>
-            <td><input class="input" type="number"></td>
-            <td><input class="input" type="number"></td>
-            </tr>
+            <td><input class="input" type="text"/></td>
+            <td><input class="input" type="text"/></td>
+            <td><input class="input" type="text"/></td>
+            <td><input class="input" type="text"/></td>
+            <td><input class="input" type="text"/></td>
+            <td><input class="input" type="number" id="cant1" oninput="changeValores(1)" /></td>
+            <td><input class="input" type="number" id="valor1" value="" oninput="changeValores(1)" /></td>
+            <td><input class="input" type="text" id="total1" data-total="" readonly /></td>
             </tr>
             <tr>
-              <td><input class="input" type="number"></td>
-              <td><input class="input" type="number"></td>
-              <td><input class="input" type="number"></td>
-              <td><input class="input" type="number"></td>
-              <td><input class="input" type="number"></td>
-              <td><input class="input" type="number"></td>
-              <td><input class="input" type="number"></td>
-              <td><input class="input" type="number"></td>
+              <td><input class="input" type="text"></td>
+              <td><input class="input" type="text"></td>
+              <td><input class="input" type="text"></td>
+              <td><input class="input" type="text"></td>
+              <td><input class="input" type="text"></td>
+              <td><input class="input" type="number" id="cant2" oninput="changeValores(2)" ></td>
+              <td><input class="input" type="number" id="valor2" value="" oninput="changeValores(2)"></td>
+              <td><input class="input" type="text" id="total2" data-total="" readonly></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><input class="input" type="text" id="total" readonly /></td>
               </tr>
         </table>
-    </div>
+        </div>
+      </form>
   </body>
 </html>
