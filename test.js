@@ -23,3 +23,13 @@ function changeValores(id){
     const rep = '$1.';
     return number.toString().replace(exp,rep);
   } 
+
+
+  /* SCRIPT PARA CREACION DE USUARIOS DE FINANZAS */
+  $(document).ready(function () {
+
+    $(".toggler").on("click", function() {
+      $(".auth-page-container").toggleClass("flip");
+    });
+  
+  });

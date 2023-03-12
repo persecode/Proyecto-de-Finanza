@@ -12,22 +12,23 @@
     <h2> <a href="menu.html">Menu principal</a> </h2>
     <h1>Formulario - Carga de Gasto del Producto</h1>
     <div class="co">
-      <form action="" method="post">
+      <form action="formulario.php" method="post">
         <h2>Producto vendido a</h2>
         <label for="">Nombre del Cliente</label>
-        <input type="text" placeholder="Nombre" class="input-48" require />
+        <input type="text" name="cliente" placeholder="Nombre" class="input-48" require />
+        
         <h2 class="form_titulo">Detalle del Gasto</h2>
-        <input type="date" id="" name="" class="input-48" require />
-        <select name="usuarios" id="usuario">
-          <option value="Alicia Villalba">Alicia Villalba</option>
+        <input type="date" id="" name="fecha" class="input-48" require />
+        <select name="vendedor" id="vendedor">
+          <option value="Alicia Villalba">Alicia Villalba </option>
           <option value="Marcelo Sosa">Marcelo Sosa</option></select
         ><br /><br />
         <label for="">Nombre o Razon Social</label>
-        <input type="text" id=""name="" placeholder="Nombre o Razon Social" class="input-48" require/>
+        <input type="text" id=""name="razon" placeholder="Nombre o Razon Social" class="input-48" require/>
         <label for="">Costo Delivery</label>
-        <input type="text" id="" name="" placeholder="Costo Delivery" class="input-48" require/>
+        <input type="text" id="" name="costoD" placeholder="Costo Delivery" class="input-48" require/>
         <label for="">Costo Transporte</label>
-        <input type="text" id="" name="" placeholder="Costo Transporte" class="input-48" require/>
+        <input type="text" id="" name="costoT" placeholder="Costo Transporte" class="input-48" require/>
         <input type="submit" id="" value="Registrar" class="input-48" require />
         </div>
           <div class="contenedor_formulario">
@@ -38,7 +39,7 @@
           <thead>
             <tr>
               <th>Marca</th>
-              <th>Productos</th>
+              <th>Producto</th>
               <th>Descripcion</th>
               <th>Modelo</th>
               <th>Categoria</th>
@@ -47,14 +48,24 @@
               <th>Total</th>
             </tr>
           <tr>
-            <td><input class="input" type="text"/></td>
-            <td><input class="input" type="text"/></td>
-            <td><input class="input" type="text"/></td>
-            <td><input class="input" type="text"/></td>
-            <td><input class="input" type="text"/></td>
-            <td><input class="input" type="number" id="cant1" oninput="changeValores(1)" /></td>
-            <td><input class="input" type="number" id="valor1" value="" oninput="changeValores(1)" /></td>
-            <td><input class="input" type="text" id="total1" data-total="" readonly /></td>
+            <td>
+              <select class="input" name="marca" >
+                <option value="HP">HP</option>
+                <option value="Hikvision">Hikvision</option>
+                <option value="Kingstone">Kingstone</option>
+                <option value="Seagate">Seagate</option>
+                <option value="PNY">PNY</option>
+                <option value="Toshiba">Toshiba</option>
+                <option value="Acer">Acer</option>
+                <option value="Asus">Asus</option>
+              </select></td>
+            <td><input name="producto" class="input" type="text"/></td>
+            <td><input name="descripcion" class="input" type="text"/></td>
+            <td><input name="modelo" class="input" type="text"/></td>
+            <td><input name="categoria" class="input" type="text"/></td>
+            <td><input name="cantidad" class="input" type="number" id="cant1" oninput="changeValores(1)" /></td>
+            <td><input name="costo" class="input" type="number" id="valor1" value="" oninput="changeValores(1)" /></td>
+            <td><input name="subtotal" class="input" type="number" id="total1" data-total="" readonly /></td>
             </tr>
             <tr>
               <td><input class="input" type="text"></td>

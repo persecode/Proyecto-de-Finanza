@@ -26,3 +26,4 @@ alert(" Usted se registro con exito");
 window.history.go(-1);
 </script>';
 }
+?>
